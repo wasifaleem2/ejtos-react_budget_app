@@ -34,7 +34,7 @@ const App = () => {
                             <ExpenseTotal />
                         </div>
                         {/* Add Currency component here under */}        
-                        <div className='col-sm'>
+                        <div className='col-sm-1'>
                             <Currency />
                         </div>
                         {/* Add ExpenseList component here under */}         

@@ -1,0 +1,9 @@
+#currency-select{
+    background-color: rgb(146, 239, 146);
+    color: black;
+    height: 30px;
+    width: 100px;
+}
+#currency-select option:hover{
+    background-color: white;
+}

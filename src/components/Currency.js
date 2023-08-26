@@ -1,31 +1,26 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
+import "../styles/Currency.css"
 const Currency = () => {
-    const { budget, expenses } = useContext(AppContext);
-    const totalExpenses = expenses.reduce((total, item) => {
-        return (total += item.cost);
-    }, 0);
-    const [budgetVal, setBudgetVal] = useState(budget)
-    const budgetValChange = (e) => {
-        if (e.target.value > 20000) {
-            alert("the value cannot exceed over $2000")
-        }
-        else if (e.target.value < totalExpenses) {
-            alert("You cannot reduce the budget value lower than spendings")
-        }
-        else {
-            setBudgetVal(e.target.value);
-        }
+    const { dispatch  } = useContext(AppContext);
+    const [currency, setCurrency] = useState()
+    const currencySelector = (e) => {
+        setCurrency(e.target.value)
+        console.log(e.target.value)
+        dispatch({
+            type: 'CHG_CURRENCY',
+            payload: e.target.value,
+        });
     }
     return (
-        <div className='alert alert-secondary'>
+        <div className='alert'>
             {/* <label for="cars">Choose a car:</label> */}
 
-            <select name="cars" id="cars" style={{backgroundColor: "green"}}>
-                <option value="volvo">$ Dollar</option>
-                <option value="saab">£ Pound</option>
-                <option value="mercedes">€ Euro</option>
-                <option value="audi">₹ Rupees</option>
+            <select name="cars" id="currency-select" onChange={currencySelector}>
+                <option value="£">£ Pound</option>
+                <option value="$">$ Dollar</option>
+                <option value="€">€ Euro</option>
+                <option value="₹">₹ Rupees</option>
             </select>
         </div>
     );
