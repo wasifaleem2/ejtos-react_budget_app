@@ -1,8 +1,13 @@
+select-container{
+    background-color: rgb(146, 239, 146);
+    /* height: 100% */
+    /* width */
+}
 #currency-select{
     background-color: rgb(146, 239, 146);
     color: black;
     height: 30px;
-    width: 100px;
+    width: 200px;
 }
 #currency-select option:hover{
     background-color: white;

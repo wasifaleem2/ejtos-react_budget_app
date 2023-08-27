@@ -15,13 +15,14 @@ const Currency = () => {
     return (
         <div className='alert'>
             {/* <label for="cars">Choose a car:</label> */}
-
-            <select name="cars" id="currency-select" onChange={currencySelector}>
-                <option value="£">£ Pound</option>
-                <option value="$">$ Dollar</option>
-                <option value="€">€ Euro</option>
-                <option value="₹">₹ Rupees</option>
-            </select>
+            <div className="select-container">
+                <select name="cars" value={`Currency ${currency}`} id="currency-select" onChange={currencySelector}>
+                    <option value="£">£ Pound</option>
+                    <option value="$">$ Dollar</option>
+                    <option value="€">€ Euro</option>
+                    <option value="₹">₹ Rupees</option>
+                </select>
+            </div>
         </div>
     );
 };
