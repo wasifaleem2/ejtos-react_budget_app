@@ -3,12 +3,17 @@ select-container{
     /* height: 100% */
     /* width */
 }
-#currency-select{
-    background-color: rgb(146, 239, 146);
-    color: black;
-    height: 30px;
-    width: 200px;
+#currency-select {
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgb(149, 228, 149);
+    border: none;
 }
-#currency-select option:hover{
-    background-color: white;
+  
+#currency-select option {
+    padding: 10px;
+}
+#currency-select option:hover {
+    background-color: rgb(149, 228, 149);
+    /* Add more styles for the hover effect */
 }

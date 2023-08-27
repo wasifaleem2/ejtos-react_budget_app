@@ -16,7 +16,7 @@ const Currency = () => {
         <div className='alert'>
             {/* <label for="cars">Choose a car:</label> */}
             <div className="select-container">
-                <select name="cars" value={`Currency ${currency}`} id="currency-select" onChange={currencySelector}>
+                <select name="cars" value={`select ${currency}`} id="currency-select" onChange={currencySelector}>
                     <option value="£">£ Pound</option>
                     <option value="$">$ Dollar</option>
                     <option value="€">€ Euro</option>
